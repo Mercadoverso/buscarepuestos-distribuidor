@@ -1,0 +1,30 @@
+
+---
+
+## 📄 Archivo 22: `public/img/README.md`
+
+```markdown
+# Imágenes
+
+Coloca aquí las siguientes imágenes **optimizadas**:
+
+- `logo.png` (320x80) — logo para footer (fondo oscuro)
+- `logob.png` (320x80) — logo para header (fondo blanco)
+- `fondo.webp` (1920x1080) — imagen del hero (convertir de PNG a WebP)
+- `og-image.jpg` (1200x630) — imagen para compartir en redes/WhatsApp
+- `favicon-32x32.png`
+- `apple-touch-icon.png` (180x180)
+- `icon-192.png`
+- `icon-512.png`
+- `bobina.webp` (400x200)
+- `cuerpo.webp` (400x200)
+- `transbank.png` (140x48)
+
+## Conversión recomendada
+
+```bash
+# WebP (mejor compresión)
+cwebp -q 80 fondo.png -o fondo.webp
+
+# O con ImageMagick
+magick fondo.png -quality 80 fondo.webp

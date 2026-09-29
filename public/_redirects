@@ -1,0 +1,5 @@
+# Redirigir www a no-www o viceversa (elige una)
+# https://buscarepuestos.cl/*  https://www.buscarepuestos.cl/:splat  301!
+
+# Redirigir rutas viejas
+/distribuidores/  /distribuidor/  301!

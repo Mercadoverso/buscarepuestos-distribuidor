@@ -1,0 +1,13 @@
+/* TEAM */
+  Empresa: RENTAQ S.p.A.
+  Contacto: soporte@buscarepuestos.cl
+  Ubicación: Los Andes, Valparaíso, Chile
+
+/* SITE */
+  Última actualización: 2026-01-15
+  Idioma: Español (Chile)
+  Doctype: HTML5
+  Componentes: Tailwind CSS, Vanilla JS
+
+/* THANKS */
+  Gracias a todos los distribuidores que confían en BuscaRepuestos.cl

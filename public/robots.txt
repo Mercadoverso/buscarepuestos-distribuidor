@@ -1,0 +1,15 @@
+# BuscaRepuestos.cl — Distribuidores
+User-agent: *
+Allow: /
+Disallow: /gracias.html
+Disallow: /404.html
+
+# Bloquear scrapers agresivos (opcional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+Sitemap: https://www.buscarepuestos.cl/sitemap.xml
+Host: https://www.buscarepuestos.cl

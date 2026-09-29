@@ -1,0 +1,23 @@
+{
+  "name": "buscarepuestos-distribuidor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Landing B2B de captación de distribuidores de repuestos - BuscaRepuestos.cl",
+  "author": "RENTAQ S.p.A.",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./public/css/styles.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./public/css/styles.css --watch",
+    "serve": "npx --yes serve public -l 3000",
+    "build": "npm run build:css",
+    "clean": "rm -rf node_modules public/css/styles.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
