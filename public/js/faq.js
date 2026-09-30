@@ -17,7 +17,6 @@
       btn.addEventListener('click', function () {
         var isOpen = !answer.classList.contains('hidden');
 
-        // Cerrar los demás
         items.forEach(function (other) {
           if (other === item) return;
           var oa = other.querySelector('.faq-answer');
@@ -28,7 +27,6 @@
           if (oi) oi.style.transform = 'rotate(0deg)';
         });
 
-        // Toggle actual
         answer.classList.toggle('hidden');
         btn.setAttribute('aria-expanded', String(!isOpen));
         if (icon) icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';

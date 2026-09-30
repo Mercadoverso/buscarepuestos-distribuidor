@@ -63,6 +63,7 @@
   <!-- CSS COMPILADO (sin CDN de Tailwind)                         -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/cookie-consent.css">
 
   <!-- ═══════════════════════════════════════════════════════════ -->
   <!-- STRUCTURED DATA: ORGANIZATION                               -->
@@ -99,7 +100,7 @@
   </script>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- STRUCTURED DATA: SERVICE                                    -->
+  <!-- STRUCTURED DATA: SERVICE (precios actualizados)             -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <script type="application/ld+json">
   {
@@ -109,7 +110,7 @@
     "provider": { "@id": "https://www.buscarepuestos.cl/#organization" },
     "areaServed": { "@type": "Country", "name": "Chile" },
     "serviceType": "Generación de leads para venta de repuestos automotrices",
-        "offers": [
+    "offers": [
       { "@type": "Offer", "name": "Plan Emprendedor", "price": "85000", "priceCurrency": "CLP" },
       { "@type": "Offer", "name": "Plan PYME", "price": "170000", "priceCurrency": "CLP" },
       { "@type": "Offer", "name": "Plan Empresa", "price": "330000", "priceCurrency": "CLP" }
@@ -125,78 +126,39 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Inicio",
-        "item": "https://www.buscarepuestos.cl/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Distribuidores",
-        "item": "https://www.buscarepuestos.cl/distribuidor/"
-      }
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.buscarepuestos.cl/" },
+      { "@type": "ListItem", "position": 2, "name": "Distribuidores", "item": "https://www.buscarepuestos.cl/distribuidor/" }
     ]
   }
   </script>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- STRUCTURED DATA: FAQPage                                    -->
+  <!-- STRUCTURED DATA: FAQPage (precios actualizados)             -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Cómo se realiza el pago del plan?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Aceptamos tarjetas de crédito/débito, Webpay y transferencia bancaria. La suscripción se renueva automáticamente cada mes, pero puede cancelar cuando quiera." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cómo se asigna una solicitud?",
-        "acceptedAnswer": { "@type": "Answer", "text": "El sistema asigna las solicitudes según la capacidad de respuesta disponible de cada distribuidor en ese momento." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Recibo factura por mi suscripción?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sí, emitimos factura electrónica con IVA incluido (19%) según lo establecido por el SII. Al registrarte, debes ingresar tu RUT y razón social para la facturación mensual." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cómo sé que los compradores son reales?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Validamos cada solicitud. El comprador debe verificar su correo electrónico y teléfono antes de publicar. Además, monitoreamos patrones de comportamiento para detectar actividades sospechosas." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Existe algún contrato de amarre o permanencia?",
-        "acceptedAnswer": { "@type": "Answer", "text": "No. Las suscripciones son mensuales. Usted puede pausar, cancelar o cambiar de plan cuando lo estime conveniente según la capacidad de stock o personal de su local." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué pasa si consumo todas las solicitudes antes de terminar el mes?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Si su equipo es rápido cerrando ventas y consume su cuota de solicitudes, puede escoger un nuevo plan en cualquier momento directamente desde su panel de control." }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cobran algún porcentaje por las ventas que yo concrete?",
-        "acceptedAnswer": { "@type": "Answer", "text": "No, 0%. El comprador le paga de manera directa mediante transferencia, efectivo o Transbank según las condiciones de su propio local. No intervenimos en los precios ni en la transacción." }
-      }
+      { "@type": "Question", "name": "¿Cómo se realiza el pago del plan?", "acceptedAnswer": { "@type": "Answer", "text": "Aceptamos tarjetas de crédito/débito, Webpay y transferencia bancaria. La suscripción se renueva automáticamente cada mes, pero puede cancelar cuando quiera." } },
+      { "@type": "Question", "name": "¿Cómo se asigna una solicitud?", "acceptedAnswer": { "@type": "Answer", "text": "El sistema asigna las solicitudes según la capacidad de respuesta disponible de cada distribuidor en ese momento." } },
+      { "@type": "Question", "name": "¿Recibo factura por mi suscripción?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, emitimos factura electrónica con IVA incluido (19%) según lo establecido por el SII." } },
+      { "@type": "Question", "name": "¿Cómo sé que los compradores son reales?", "acceptedAnswer": { "@type": "Answer", "text": "Validamos cada solicitud. El comprador debe verificar su correo electrónico y teléfono antes de publicar." } },
+      { "@type": "Question", "name": "¿Existe algún contrato de amarre o permanencia?", "acceptedAnswer": { "@type": "Answer", "text": "No. Las suscripciones son mensuales. Puede pausar, cancelar o cambiar de plan cuando lo estime conveniente." } },
+      { "@type": "Question", "name": "¿Qué pasa si consumo todas las solicitudes antes de terminar el mes?", "acceptedAnswer": { "@type": "Answer", "text": "Puede escoger un nuevo plan en cualquier momento directamente desde su panel de control." } },
+      { "@type": "Question", "name": "¿Cobran algún porcentaje por las ventas que yo concrete?", "acceptedAnswer": { "@type": "Answer", "text": "No, 0%. El comprador le paga de manera directa. No intervenimos en los precios ni en la transacción." } }
     ]
   }
   </script>
 </head>
 <body class="bg-[#fafafa] text-zinc-800 font-sans antialiased pb-20 md:pb-0">
 
-  <!-- Skip link accesible -->
   <a href="#main" class="sr-only-focusable focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-brand-green focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg">
     Saltar al contenido principal
   </a>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- SECCIÓN: HEADER                                             -->
+  <!-- HEADER                                                      -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <header class="bg-white text-zinc-800 sticky top-0 z-50 px-4 py-3 md:px-8 flex justify-between items-center shadow-sm border-b border-zinc-100" role="banner">
     <a href="https://www.buscarepuestos.cl" class="flex items-center" aria-label="BuscaRepuestos.cl — Inicio">
@@ -216,7 +178,7 @@
   <main id="main">
 
     <!-- ═══════════════════════════════════════════════════════════ -->
-    <!-- SECCIÓN: HERO                                               -->
+    <!-- HERO                                                        -->
     <!-- ═══════════════════════════════════════════════════════════ -->
     <section class="relative bg-cover bg-top text-white py-12 px-4 md:py-28 md:px-8 text-center overflow-hidden min-h-[400px] md:min-h-[500px] flex items-center" aria-label="Presentación">
       <div class="absolute inset-0 z-0 animate-kenburns" aria-hidden="true"></div>
@@ -231,8 +193,8 @@
           Convierta su inventario en ventas efectivas hoy mismo.
         </p>
         <p class="text-xs md:text-sm text-zinc-400 max-w-3xl mx-auto mb-6 font-semibold uppercase tracking-wide">
-  Planes desde $85.000/mes · Sin contrato de permanencia
-</p>
+          Planes desde $85.000/mes · Sin contrato de permanencia
+        </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
           <a href="https://www.buscarepuestos.cl/crear-cuenta-distribuidor" class="btn-primary">
             Quiero Vender por WhatsApp
@@ -245,7 +207,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════ -->
-    <!-- SECCIÓN: STATS                                              -->
+    <!-- STATS                                                       -->
     <!-- ═══════════════════════════════════════════════════════════ -->
     <section class="bg-brand-charcoal text-white py-6 px-4 shadow-inner border-y border-zinc-800" aria-label="Cifras clave">
       <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -269,7 +231,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════ -->
-    <!-- SECCIÓN: CÓMO FUNCIONA                                      -->
+    <!-- CÓMO FUNCIONA                                               -->
     <!-- ═══════════════════════════════════════════════════════════ -->
     <section id="como-funciona" class="py-20 md:py-28 px-4 md:px-8 max-w-6xl mx-auto" aria-labelledby="cf-title">
       <div class="text-center mb-12">
@@ -281,8 +243,6 @@
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-
-        <!-- Pasos -->
         <div class="lg:col-span-7 space-y-6">
           <div class="flex gap-4 items-start p-5 bg-white rounded-2xl shadow-sm border border-zinc-100">
             <div class="bg-green-50 text-brand-green p-3.5 rounded-xl font-bold text-xl" aria-hidden="true">1</div>
@@ -291,7 +251,6 @@
               <p class="text-zinc-600 text-sm mt-1">Talleres o particulares ingresan datos del vehículo y repuesto: tipo, marca, modelo, año, patente, VIN y contacto.</p>
             </div>
           </div>
-
           <div class="flex gap-4 items-start p-5 bg-white rounded-2xl shadow-sm border border-zinc-100">
             <div class="bg-green-50 text-brand-green p-3.5 rounded-xl font-bold text-xl" aria-hidden="true">2</div>
             <div>
@@ -299,7 +258,6 @@
               <p class="text-zinc-600 text-sm mt-1">La solicitud llega con todos los detalles del repuesto y datos del cliente, lista para responder. Construya su propia base de datos.</p>
             </div>
           </div>
-
           <div class="flex gap-4 items-start p-5 bg-white rounded-2xl shadow-sm border border-zinc-100">
             <div class="bg-green-50 text-brand-green p-3.5 rounded-xl font-bold text-xl" aria-hidden="true">3</div>
             <div>
@@ -309,7 +267,6 @@
           </div>
         </div>
 
-        <!-- Maqueta WhatsApp (única, corregida) -->
         <div class="lg:col-span-5">
           <div class="bg-slate-100 p-5 rounded-2xl shadow-xl border border-slate-200 max-w-[420px] mx-auto">
             <div class="flex justify-between items-center pb-3 mb-4 border-b border-slate-300">
@@ -321,7 +278,6 @@
               <span class="text-[11px] font-black text-slate-500 uppercase tracking-widest">Nuevo Contacto</span>
               <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></div>
             </div>
-
             <div class="bg-white rounded-xl shadow-md border border-slate-200/80 p-4">
               <div class="flex justify-between items-start mb-3">
                 <div class="bg-green-50 border border-green-200/80 rounded-lg px-2.5 py-1 text-brand-green font-bold text-[10px] tracking-wide uppercase flex items-center gap-1.5">
@@ -330,45 +286,26 @@
                 </div>
                 <span class="text-[10px] text-slate-400 font-semibold bg-slate-100 rounded px-1.5 py-0.5">Hace 1 min</span>
               </div>
-
               <h3 class="text-base font-black text-slate-900 leading-tight">Nissan Terrano 2.5 (2021)</h3>
               <p class="text-xs text-brand-green font-bold mt-0.5">Patente: DKBL89</p>
-
               <div class="mt-3 space-y-1.5 bg-slate-50 p-3 rounded-lg border border-slate-200">
-                <div class="flex justify-between items-center text-xs">
-                  <span class="text-slate-500 font-medium">Repuesto:</span>
-                  <span class="text-slate-800 font-bold">Kit de Embrague completo</span>
-                </div>
-                <div class="flex justify-between items-center text-xs">
-                  <span class="text-slate-500 font-medium">Tipo:</span>
-                  <span class="text-slate-800 font-bold bg-zinc-200 px-2 py-0.5 rounded text-[10px]">Original</span>
-                </div>
-                <div class="flex justify-between items-center text-xs">
-                  <span class="text-slate-500 font-medium">Región:</span>
-                  <span class="text-slate-800 font-semibold">Biobío</span>
-                </div>
-                <div class="flex justify-between items-center text-xs">
-                  <span class="text-slate-500 font-medium">Comprador:</span>
-                  <span class="text-slate-800 font-bold text-brand-green">Gerson Muñoz</span>
-                </div>
+                <div class="flex justify-between items-center text-xs"><span class="text-slate-500 font-medium">Repuesto:</span><span class="text-slate-800 font-bold">Kit de Embrague completo</span></div>
+                <div class="flex justify-between items-center text-xs"><span class="text-slate-500 font-medium">Tipo:</span><span class="text-slate-800 font-bold bg-zinc-200 px-2 py-0.5 rounded text-[10px]">Original</span></div>
+                <div class="flex justify-between items-center text-xs"><span class="text-slate-500 font-medium">Región:</span><span class="text-slate-800 font-semibold">Biobío</span></div>
+                <div class="flex justify-between items-center text-xs"><span class="text-slate-500 font-medium">Comprador:</span><span class="text-slate-800 font-bold text-brand-green">Gerson Muñoz</span></div>
               </div>
-
               <hr class="my-3.5 border-slate-100">
-
               <div class="flex gap-2">
-                <span class="flex-1 bg-brand-green text-white text-xs font-bold py-2.5 px-3 rounded-lg flex items-center justify-center gap-1.5 shadow-sm select-none" aria-hidden="true">
-                  Demostración
-                </span>
+                <span class="flex-1 bg-brand-green text-white text-xs font-bold py-2.5 px-3 rounded-lg flex items-center justify-center gap-1.5 shadow-sm select-none" aria-hidden="true">Demostración</span>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════ -->
-    <!-- SECCIÓN: DEMANDA REAL                                       -->
+    <!-- DEMANDA REAL                                                -->
     <!-- ═══════════════════════════════════════════════════════════ -->
     <section class="pt-8 pb-20 px-4 md:px-8 max-w-7xl mx-auto" aria-labelledby="demanda-title">
       <div class="text-center mb-12">
@@ -380,7 +317,6 @@
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- TOP 10 MARCAS -->
         <div class="bg-white rounded-3xl shadow-xl border border-zinc-100 overflow-hidden">
           <div class="bg-gradient-to-r from-brand-charcoal to-zinc-800 text-white p-5 border-b border-zinc-700">
             <div class="flex items-center gap-3">
@@ -393,82 +329,20 @@
               </div>
             </div>
           </div>
-
           <ol class="divide-y divide-zinc-100 bg-white">
-            <li class="p-4 hover:bg-green-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-green-100 text-brand-green rounded-lg flex items-center justify-center text-xs font-black">1</span><span class="font-bold text-zinc-800">Chevrolet</span></div>
-                <span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">18.7%</span>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:100%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-green-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">2</span><span class="font-bold text-zinc-800">Nissan</span></div>
-                <span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">14.3%</span>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:76.5%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-green-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">3</span><span class="font-bold text-zinc-800">Toyota</span></div>
-                <span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">13.1%</span>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:70.1%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-green-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">4</span><span class="font-bold text-zinc-800">Hyundai</span></div>
-                <span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">8.4%</span>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:44.9%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-green-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">5</span><span class="font-bold text-zinc-800">Kia</span></div>
-                <span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">6.7%</span>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:35.8%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-green-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">6</span><span class="font-bold text-zinc-800">Peugeot</span></div>
-                <span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">4.9%</span>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:26.2%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-green-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">7</span><span class="font-bold text-zinc-800">Ford</span></div>
-                <span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">4.4%</span>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:23.5%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-green-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">8</span><span class="font-bold text-zinc-800">Renault</span></div>
-                <span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">4.1%</span>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:21.9%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-green-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">9</span><span class="font-bold text-zinc-800">Fiat</span></div>
-                <span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">3.9%</span>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:20.9%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-green-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">10</span><span class="font-bold text-zinc-800">Mazda</span></div>
-                <span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">3.2%</span>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:17.1%"></div></div>
-            </li>
+            <li class="p-4 hover:bg-green-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-green-100 text-brand-green rounded-lg flex items-center justify-center text-xs font-black">1</span><span class="font-bold text-zinc-800">Chevrolet</span></div><span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">18.7%</span></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:100%"></div></div></li>
+            <li class="p-4 hover:bg-green-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">2</span><span class="font-bold text-zinc-800">Nissan</span></div><span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">14.3%</span></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:76.5%"></div></div></li>
+            <li class="p-4 hover:bg-green-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">3</span><span class="font-bold text-zinc-800">Toyota</span></div><span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">13.1%</span></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:70.1%"></div></div></li>
+            <li class="p-4 hover:bg-green-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">4</span><span class="font-bold text-zinc-800">Hyundai</span></div><span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">8.4%</span></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:44.9%"></div></div></li>
+            <li class="p-4 hover:bg-green-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">5</span><span class="font-bold text-zinc-800">Kia</span></div><span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">6.7%</span></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:35.8%"></div></div></li>
+            <li class="p-4 hover:bg-green-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">6</span><span class="font-bold text-zinc-800">Peugeot</span></div><span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">4.9%</span></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:26.2%"></div></div></li>
+            <li class="p-4 hover:bg-green-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">7</span><span class="font-bold text-zinc-800">Ford</span></div><span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">4.4%</span></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:23.5%"></div></div></li>
+            <li class="p-4 hover:bg-green-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">8</span><span class="font-bold text-zinc-800">Renault</span></div><span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">4.1%</span></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:21.9%"></div></div></li>
+            <li class="p-4 hover:bg-green-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">9</span><span class="font-bold text-zinc-800">Fiat</span></div><span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">3.9%</span></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:20.9%"></div></div></li>
+            <li class="p-4 hover:bg-green-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">10</span><span class="font-bold text-zinc-800">Mazda</span></div><span class="bg-green-100 text-brand-green font-black px-3 py-1 rounded-full text-sm">3.2%</span></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-brand-green to-green-400 h-2 rounded-full" style="width:17.1%"></div></div></li>
           </ol>
         </div>
 
-        <!-- TOP 10 REPUESTOS -->
         <div class="bg-white rounded-3xl shadow-xl border border-zinc-100 overflow-hidden">
           <div class="bg-gradient-to-r from-brand-charcoal to-zinc-800 text-white p-5 border-b border-zinc-700">
             <div class="flex items-center gap-3">
@@ -481,75 +355,24 @@
               </div>
             </div>
           </div>
-
           <ol class="divide-y divide-zinc-100 bg-white">
-            <li class="p-4 hover:bg-amber-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-amber-100 text-amber-700 rounded-lg flex items-center justify-center text-xs font-black">1</span><span class="font-bold text-zinc-800">Radiador (motor / AC)</span></div>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:100%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-amber-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">2</span><span class="font-bold text-zinc-800">Kit de embrague</span></div>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:81.5%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-amber-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">3</span><span class="font-bold text-zinc-800">Amortiguadores (suspensión)</span></div>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:74.1%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-amber-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">4</span><span class="font-bold text-zinc-800">Cremallera de dirección</span></div>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:55.6%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-amber-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">5</span><span class="font-bold text-zinc-800">Bomba de agua</span></div>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:51.9%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-amber-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">6</span><span class="font-bold text-zinc-800">Correa / kit distribución</span></div>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:48.1%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-amber-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">7</span><span class="font-bold text-zinc-800">Alternador</span></div>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:44.4%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-amber-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">8</span><span class="font-bold text-zinc-800">Faro / Óptico delantero</span></div>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:44.4%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-amber-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">9</span><span class="font-bold text-zinc-800">Homocinética / Semieje</span></div>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:40.7%"></div></div>
-            </li>
-            <li class="p-4 hover:bg-amber-50/30">
-              <div class="flex justify-between items-center mb-1">
-                <div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">10</span><span class="font-bold text-zinc-800">Bujías</span></div>
-              </div>
-              <div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:37.0%"></div></div>
-            </li>
+            <li class="p-4 hover:bg-amber-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-amber-100 text-amber-700 rounded-lg flex items-center justify-center text-xs font-black">1</span><span class="font-bold text-zinc-800">Radiador (motor / AC)</span></div></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:100%"></div></div></li>
+            <li class="p-4 hover:bg-amber-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">2</span><span class="font-bold text-zinc-800">Kit de embrague</span></div></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:81.5%"></div></div></li>
+            <li class="p-4 hover:bg-amber-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">3</span><span class="font-bold text-zinc-800">Amortiguadores (suspensión)</span></div></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:74.1%"></div></div></li>
+            <li class="p-4 hover:bg-amber-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">4</span><span class="font-bold text-zinc-800">Cremallera de dirección</span></div></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:55.6%"></div></div></li>
+            <li class="p-4 hover:bg-amber-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">5</span><span class="font-bold text-zinc-800">Bomba de agua</span></div></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:51.9%"></div></div></li>
+            <li class="p-4 hover:bg-amber-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">6</span><span class="font-bold text-zinc-800">Correa / kit distribución</span></div></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:48.1%"></div></div></li>
+            <li class="p-4 hover:bg-amber-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">7</span><span class="font-bold text-zinc-800">Alternador</span></div></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:44.4%"></div></div></li>
+            <li class="p-4 hover:bg-amber-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">8</span><span class="font-bold text-zinc-800">Faro / Óptico delantero</span></div></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:44.4%"></div></div></li>
+            <li class="p-4 hover:bg-amber-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">9</span><span class="font-bold text-zinc-800">Homocinética / Semieje</span></div></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:40.7%"></div></div></li>
+            <li class="p-4 hover:bg-amber-50/30"><div class="flex justify-between items-center mb-1"><div class="flex items-center gap-3"><span class="w-7 h-7 bg-zinc-100 text-zinc-600 rounded-lg flex items-center justify-center text-xs font-black">10</span><span class="font-bold text-zinc-800">Bujías</span></div></div><div class="w-full bg-zinc-100 rounded-full h-2 overflow-hidden"><div class="bg-gradient-to-r from-amber-500 to-amber-400 h-2 rounded-full" style="width:37.0%"></div></div></li>
           </ol>
         </div>
       </div>
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════ -->
-    <!-- SECCIÓN: MESÓN DIGITAL                                      -->
+    <!-- MESÓN DIGITAL                                               -->
     <!-- ═══════════════════════════════════════════════════════════ -->
     <section class="py-16 bg-white px-4 md:px-8 border-b border-zinc-100" aria-labelledby="meson-title">
       <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -581,7 +404,6 @@
           </div>
 
           <div class="flex flex-col md:flex-row gap-4">
-            <!-- Filtros -->
             <div class="w-full md:w-48 bg-zinc-700 rounded-xl p-3 flex-shrink-0 text-white">
               <div class="flex items-center gap-1.5 text-xs font-bold mb-3 pb-1.5 border-b border-zinc-600/50">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
@@ -590,27 +412,20 @@
               <div class="space-y-2.5">
                 <div>
                   <label for="filtro-marca" class="sr-only">Filtrar por marca</label>
-                  <select id="filtro-marca" class="w-full bg-white text-zinc-700 text-[11px] font-medium rounded p-1.5 border border-zinc-300 focus:outline-none focus:border-brand-green">
-                    <option>Por Marca</option>
-                  </select>
+                  <select id="filtro-marca" class="w-full bg-white text-zinc-700 text-[11px] font-medium rounded p-1.5 border border-zinc-300 focus:outline-none focus:border-brand-green"><option>Por Marca</option></select>
                 </div>
                 <div>
                   <label for="filtro-region" class="sr-only">Filtrar por región</label>
-                  <select id="filtro-region" class="w-full bg-white text-zinc-700 text-[11px] font-medium rounded p-1.5 border border-zinc-300 focus:outline-none focus:border-brand-green">
-                    <option>Por Región</option>
-                  </select>
+                  <select id="filtro-region" class="w-full bg-white text-zinc-700 text-[11px] font-medium rounded p-1.5 border border-zinc-300 focus:outline-none focus:border-brand-green"><option>Por Región</option></select>
                 </div>
                 <div>
                   <label for="filtro-tipo" class="sr-only">Filtrar por tipo</label>
-                  <select id="filtro-tipo" class="w-full bg-white text-zinc-700 text-[11px] font-medium rounded p-1.5 border border-zinc-300 focus:outline-none focus:border-brand-green">
-                    <option>Por Tipo</option>
-                  </select>
+                  <select id="filtro-tipo" class="w-full bg-white text-zinc-700 text-[11px] font-medium rounded p-1.5 border border-zinc-300 focus:outline-none focus:border-brand-green"><option>Por Tipo</option></select>
                 </div>
                 <button type="button" class="w-full bg-brand-green hover:bg-brand-greenDark text-white font-bold text-[11px] py-1.5 rounded transition shadow-sm mt-1" aria-hidden="true">Aplicar</button>
               </div>
             </div>
 
-            <!-- Tarjetas demo -->
             <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <article class="bg-white rounded-xl shadow-md border border-zinc-200 overflow-hidden flex flex-col justify-between">
                 <div class="relative bg-neutral-700 h-32 overflow-hidden">
@@ -660,7 +475,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════ -->
-    <!-- SECCIÓN: PROPUESTA DE VALOR                                 -->
+    <!-- PROPUESTA DE VALOR                                          -->
     <!-- ═══════════════════════════════════════════════════════════ -->
     <section class="py-20 px-4 md:px-8 bg-zinc-50 border-y border-zinc-100" aria-label="Propuesta de valor">
       <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -689,7 +504,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════ -->
-    <!-- SECCIÓN: TRUST BAR                                          -->
+    <!-- TRUST BAR                                                   -->
     <!-- ═══════════════════════════════════════════════════════════ -->
     <section class="py-12 bg-white border-b border-zinc-100" aria-label="Garantías">
       <div class="max-w-6xl mx-auto px-4 md:px-8">
@@ -723,7 +538,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════ -->
-    <!-- SECCIÓN: IA GEMINI                                          -->
+    <!-- IA GEMINI                                                   -->
     <!-- ═══════════════════════════════════════════════════════════ -->
     <section class="py-16 bg-zinc-50 px-4 md:px-8" aria-labelledby="ia-title">
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-center">
@@ -745,7 +560,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════ -->
-    <!-- SECCIÓN: ROI CALCULATOR                                     -->
+    <!-- ROI CALCULATOR (PRECIOS ACTUALIZADOS)                       -->
     <!-- ═══════════════════════════════════════════════════════════ -->
     <section id="roi-calculator" class="bg-brand-charcoal text-white py-16 px-4 md:px-8 border-y border-zinc-800" aria-labelledby="roi-title">
       <div class="max-w-4xl mx-auto">
@@ -775,12 +590,12 @@
               <p id="help-conversion" class="text-xs text-zinc-500 mt-1">De cada 100 cotizaciones que envía, ¿cuántas logra vender?</p>
             </div>
             <div>
-            <label for="select-plan" class="block text-sm font-semibold text-zinc-300 mb-2">Seleccione el Plan BuscaRepuestos:</label>
-<select id="select-plan" class="w-full bg-brand-charcoal border border-zinc-700 rounded-xl p-3.5 text-white font-bold focus:outline-none focus:border-brand-green">
-  <option value="85000,20">Plan Emprendedor - $85.000 (20 Leads)</option>
-  <option value="170000,50" selected>Plan PYME - $170.000 (50 Leads)</option>
-  <option value="330000,120">Plan Empresa - $330.000 (120 Leads)</option>
-</select>
+              <label for="select-plan" class="block text-sm font-semibold text-zinc-300 mb-2">Seleccione el Plan BuscaRepuestos:</label>
+              <select id="select-plan" class="w-full bg-brand-charcoal border border-zinc-700 rounded-xl p-3.5 text-white font-bold focus:outline-none focus:border-brand-green">
+                <option value="85000,20">Plan Emprendedor - $85.000 (20 Leads)</option>
+                <option value="170000,50" selected>Plan PYME - $170.000 (50 Leads)</option>
+                <option value="330000,120">Plan Empresa - $330.000 (120 Leads)</option>
+              </select>
             </div>
           </div>
           <div class="bg-brand-charcoal rounded-xl p-6 border border-zinc-800 flex flex-col justify-between">
@@ -795,13 +610,13 @@
               </div>
               <div class="flex justify-between items-center pb-3 border-b border-zinc-800">
                 <span class="text-zinc-400 text-sm font-medium">Inversión:</span>
-                <span class="text-xl font-bold text-rose-400" id="calc-cost">-$150.000</span>
+                <span class="text-xl font-bold text-rose-400" id="calc-cost">-$170.000</span>
               </div>
             </div>
             <div class="mt-6 pt-4 border-t-2 border-dashed border-zinc-800">
               <div class="text-xs text-zinc-400 uppercase tracking-widest text-center font-bold">Retorno Neto de Inversión (ROI)</div>
               <div class="text-3xl md:text-4xl font-black text-center text-brand-green mt-2" id="calc-net" role="status" aria-live="polite">
-                +$210.000 <span class="text-xs block text-zinc-400 font-normal mt-1">Ganancia neta adicional</span>
+                +$190.000 <span class="text-xs block text-zinc-400 font-normal mt-1">Ganancia neta adicional</span>
               </div>
             </div>
           </div>
@@ -810,7 +625,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════ -->
-    <!-- SECCIÓN: PLANES                                             -->
+    <!-- PLANES (PRECIOS ACTUALIZADOS)                               -->
     <!-- ═══════════════════════════════════════════════════════════ -->
     <section id="planes" class="bg-zinc-100 py-16 px-4 md:px-8" aria-labelledby="planes-title">
       <div class="max-w-6xl mx-auto">
@@ -822,59 +637,59 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
           <!-- Plan Emprendedor -->
-<div class="bg-white rounded-2xl p-8 border border-zinc-200 shadow-sm flex flex-col justify-between transition hover:shadow-lg hover:-translate-y-1">
-  <div>
-    <div class="text-zinc-400 font-bold text-[10px] uppercase tracking-wider mb-2">Para Vendedores Independientes</div>
-    <h3 class="text-2xl font-bold text-brand-charcoal">Plan Emprendedor</h3>
-    <div class="text-4xl font-black text-brand-charcoal mt-4">$85.000<span class="text-sm font-normal text-zinc-500"> / Mes</span></div>
-    <span class="bg-emerald-50 text-emerald-800 font-bold text-xs px-2.5 py-1 rounded-full inline-block mt-2">Costo por Solicitud: $4.250</span>
-    <ul class="mt-8 space-y-4 text-zinc-600 text-sm">
-      <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> <strong>20 Solicitudes</strong> al mes</li>
-      <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> Selección de marcas prioritarias</li>
-    </ul>
-  </div>
-  <a href="https://www.buscarepuestos.cl/crear-cuenta-distribuidor" class="bg-brand-charcoal hover:bg-brand-darkBg text-white font-bold py-3 px-6 rounded-lg text-center mt-8 transition shadow-sm">Registrarme</a>
-</div>
+          <div class="bg-white rounded-2xl p-8 border border-zinc-200 shadow-sm flex flex-col justify-between transition hover:shadow-lg hover:-translate-y-1">
+            <div>
+              <div class="text-zinc-400 font-bold text-[10px] uppercase tracking-wider mb-2">Para Vendedores Independientes</div>
+              <h3 class="text-2xl font-bold text-brand-charcoal">Plan Emprendedor</h3>
+              <div class="text-4xl font-black text-brand-charcoal mt-4">$85.000<span class="text-sm font-normal text-zinc-500"> / Mes</span></div>
+              <span class="bg-emerald-50 text-emerald-800 font-bold text-xs px-2.5 py-1 rounded-full inline-block mt-2">Costo por Solicitud: $4.250</span>
+              <ul class="mt-8 space-y-4 text-zinc-600 text-sm">
+                <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> <strong>20 Solicitudes</strong> al mes</li>
+                <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> Selección de marcas prioritarias</li>
+              </ul>
+            </div>
+            <a href="https://www.buscarepuestos.cl/crear-cuenta-distribuidor" class="bg-brand-charcoal hover:bg-brand-darkBg text-white font-bold py-3 px-6 rounded-lg text-center mt-8 transition shadow-sm">Registrarme</a>
+          </div>
 
-          <!-- Plan PYME (destacado) -->
-<div class="bg-white rounded-2xl p-8 border-2 border-brand-green shadow-xl flex flex-col justify-between relative transition hover:scale-105">
-  <span class="bg-brand-green text-white text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full absolute -top-3.5 left-1/2 -translate-x-1/2">Más Contratado</span>
-  <div>
-    <div class="text-brand-green font-bold text-[10px] uppercase tracking-wider mb-2">Negocios en Crecimiento</div>
-    <h3 class="text-2xl font-bold text-brand-charcoal">Plan PYME</h3>
-    <div class="text-4xl font-black text-brand-charcoal mt-4">$170.000<span class="text-sm font-normal text-zinc-500"> / Mes</span></div>
-    <span class="bg-emerald-50 text-emerald-800 font-bold text-xs px-2.5 py-1 rounded-full inline-block mt-2">Costo por Solicitud: $3.400</span>
-    <ul class="mt-8 space-y-4 text-zinc-600 text-sm">
-      <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> <strong>50 Solicitudes</strong> al mes</li>
-      <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> Prioridad por zona geográfica</li>
-      <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> Acceso directo al Mesón Digital</li>
-    </ul>
-  </div>
-  <a href="https://www.buscarepuestos.cl/crear-cuenta-distribuidor" class="bg-brand-green text-white font-bold py-3 px-6 rounded-lg text-center mt-8 transition shadow-md">Registrarme</a>
-</div>
+          <!-- Plan PYME -->
+          <div class="bg-white rounded-2xl p-8 border-2 border-brand-green shadow-xl flex flex-col justify-between relative transition hover:scale-105">
+            <span class="bg-brand-green text-white text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full absolute -top-3.5 left-1/2 -translate-x-1/2">Más Contratado</span>
+            <div>
+              <div class="text-brand-green font-bold text-[10px] uppercase tracking-wider mb-2">Negocios en Crecimiento</div>
+              <h3 class="text-2xl font-bold text-brand-charcoal">Plan PYME</h3>
+              <div class="text-4xl font-black text-brand-charcoal mt-4">$170.000<span class="text-sm font-normal text-zinc-500"> / Mes</span></div>
+              <span class="bg-emerald-50 text-emerald-800 font-bold text-xs px-2.5 py-1 rounded-full inline-block mt-2">Costo por Solicitud: $3.400</span>
+              <ul class="mt-8 space-y-4 text-zinc-600 text-sm">
+                <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> <strong>50 Solicitudes</strong> al mes</li>
+                <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> Prioridad por zona geográfica</li>
+                <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> Acceso directo al Mesón Digital</li>
+              </ul>
+            </div>
+            <a href="https://www.buscarepuestos.cl/crear-cuenta-distribuidor" class="bg-brand-green text-white font-bold py-3 px-6 rounded-lg text-center mt-8 transition shadow-md">Registrarme</a>
+          </div>
 
           <!-- Plan Empresa -->
           <div class="bg-white rounded-2xl p-8 border border-zinc-200 shadow-sm flex flex-col justify-between transition hover:shadow-lg hover:-translate-y-1">
-  <div>
-    <div class="text-zinc-400 font-bold text-[10px] uppercase tracking-wider mb-2">Locales de Gran Envergadura</div>
-    <h3 class="text-2xl font-bold text-brand-charcoal">Plan Empresa</h3>
-    <div class="text-4xl font-black text-brand-charcoal mt-4">$330.000<span class="text-sm font-normal text-zinc-500"> / Mes</span></div>
-    <span class="bg-emerald-50 text-emerald-800 font-bold text-xs px-2.5 py-1 rounded-full inline-block mt-2">Costo por Solicitud: $2.750</span>
-    <ul class="mt-8 space-y-4 text-zinc-600 text-sm">
-      <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> <strong>120 Solicitudes</strong> al mes</li>
-      <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> Asignación prioritaria de solicitudes</li>
-      <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> Acceso directo al Mesón Digital</li>
-      <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> Soporte personalizado</li>
-    </ul>
-  </div>
-  <a href="https://www.buscarepuestos.cl/crear-cuenta-distribuidor" class="bg-brand-charcoal hover:bg-brand-darkBg text-white font-bold py-3 px-6 rounded-lg text-center mt-8 transition shadow-sm">Registrarme</a>
-</div>
+            <div>
+              <div class="text-zinc-400 font-bold text-[10px] uppercase tracking-wider mb-2">Locales de Gran Envergadura</div>
+              <h3 class="text-2xl font-bold text-brand-charcoal">Plan Empresa</h3>
+              <div class="text-4xl font-black text-brand-charcoal mt-4">$330.000<span class="text-sm font-normal text-zinc-500"> / Mes</span></div>
+              <span class="bg-emerald-50 text-emerald-800 font-bold text-xs px-2.5 py-1 rounded-full inline-block mt-2">Costo por Solicitud: $2.750</span>
+              <ul class="mt-8 space-y-4 text-zinc-600 text-sm">
+                <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> <strong>120 Solicitudes</strong> al mes</li>
+                <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> Asignación prioritaria de solicitudes</li>
+                <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> Acceso directo al Mesón Digital</li>
+                <li class="flex items-center gap-2"><span class="text-brand-green" aria-hidden="true">✓</span> Soporte personalizado</li>
+              </ul>
+            </div>
+            <a href="https://www.buscarepuestos.cl/crear-cuenta-distribuidor" class="bg-brand-charcoal hover:bg-brand-darkBg text-white font-bold py-3 px-6 rounded-lg text-center mt-8 transition shadow-sm">Registrarme</a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════ -->
-    <!-- SECCIÓN: FAQ                                                -->
+    <!-- FAQ                                                         -->
     <!-- ═══════════════════════════════════════════════════════════ -->
     <section class="py-12 bg-zinc-50 px-4 md:px-8" aria-labelledby="faq-title">
       <div class="max-w-3xl mx-auto">
@@ -886,7 +701,6 @@
           <h2 id="faq-title" class="text-2xl md:text-3xl font-black text-brand-charcoal mt-3 tracking-tight">Preguntas Frecuentes</h2>
           <p class="text-zinc-500 text-sm mt-1">Haz clic en cualquier pregunta para ver la respuesta</p>
         </div>
-
         <div class="space-y-2" id="faq-container">
           <div class="faq-item bg-white rounded-xl border border-zinc-100 overflow-hidden">
             <button class="faq-question w-full text-left p-4 font-black text-zinc-800 flex items-center justify-between gap-2 hover:bg-zinc-50 transition" aria-expanded="false" aria-controls="faq-a1">
@@ -895,7 +709,6 @@
             </button>
             <div class="faq-answer hidden px-4 pb-4 text-zinc-600 text-sm leading-relaxed" id="faq-a1" role="region">Aceptamos tarjetas de crédito/débito, Webpay y transferencia bancaria. La suscripción se renueva automáticamente cada mes, pero puede cancelar cuando quiera.</div>
           </div>
-
           <div class="faq-item bg-white rounded-xl border border-zinc-100 overflow-hidden">
             <button class="faq-question w-full text-left p-4 font-black text-zinc-800 flex items-center justify-between gap-2 hover:bg-zinc-50 transition" aria-expanded="false" aria-controls="faq-a2">
               <span class="text-sm md:text-base font-normal">¿Cómo se asigna una solicitud?</span>
@@ -903,7 +716,6 @@
             </button>
             <div class="faq-answer hidden px-4 pb-4 text-zinc-600 text-sm leading-relaxed" id="faq-a2" role="region">Como una fila de supermercado, si una caja está llena, los nuevos clientes se van a las cajas que se vacían más rápido. El sistema solo le manda solicitudes a los que tienen capacidad de responder ahora mismo.</div>
           </div>
-
           <div class="faq-item bg-white rounded-xl border border-zinc-100 overflow-hidden">
             <button class="faq-question w-full text-left p-4 font-black text-zinc-800 flex items-center justify-between gap-2 hover:bg-zinc-50 transition" aria-expanded="false" aria-controls="faq-a3">
               <span class="text-sm md:text-base font-normal">¿Recibo factura por mi suscripción?</span>
@@ -911,7 +723,6 @@
             </button>
             <div class="faq-answer hidden px-4 pb-4 text-zinc-600 text-sm leading-relaxed" id="faq-a3" role="region">Sí, emitimos factura electrónica con IVA incluido (19%) según lo establecido por el SII. Al registrarte, debes ingresar tu RUT y razón social para la facturación mensual.</div>
           </div>
-
           <div class="faq-item bg-white rounded-xl border border-zinc-100 overflow-hidden">
             <button class="faq-question w-full text-left p-4 font-black text-zinc-800 flex items-center justify-between gap-2 hover:bg-zinc-50 transition" aria-expanded="false" aria-controls="faq-a4">
               <span class="text-sm md:text-base font-normal">¿Cómo sé que los compradores son reales?</span>
@@ -919,7 +730,6 @@
             </button>
             <div class="faq-answer hidden px-4 pb-4 text-zinc-600 text-sm leading-relaxed" id="faq-a4" role="region">Validamos cada solicitud. El comprador debe verificar su correo electrónico y teléfono antes de publicar. Además, monitoreamos patrones de comportamiento para detectar actividades sospechosas.</div>
           </div>
-
           <div class="faq-item bg-white rounded-xl border border-zinc-100 overflow-hidden">
             <button class="faq-question w-full text-left p-4 font-black text-zinc-800 flex items-center justify-between gap-2 hover:bg-zinc-50 transition" aria-expanded="false" aria-controls="faq-a5">
               <span class="text-sm md:text-base font-normal">¿Existe algún contrato de amarre o permanencia?</span>
@@ -927,7 +737,6 @@
             </button>
             <div class="faq-answer hidden px-4 pb-4 text-zinc-600 text-sm leading-relaxed" id="faq-a5" role="region">No. Las suscripciones son mensuales. Usted puede pausar, cancelar o cambiar de plan cuando lo estime conveniente según la capacidad de stock o personal de su local.</div>
           </div>
-
           <div class="faq-item bg-white rounded-xl border border-zinc-100 overflow-hidden">
             <button class="faq-question w-full text-left p-4 font-black text-zinc-800 flex items-center justify-between gap-2 hover:bg-zinc-50 transition" aria-expanded="false" aria-controls="faq-a6">
               <span class="text-sm md:text-base font-normal">¿Qué pasa si consumo todas las solicitudes antes de terminar el mes?</span>
@@ -935,7 +744,6 @@
             </button>
             <div class="faq-answer hidden px-4 pb-4 text-zinc-600 text-sm leading-relaxed" id="faq-a6" role="region">Si su equipo es rápido cerrando ventas y consume su cuota de solicitudes, puede escoger un nuevo plan en cualquier momento directamente desde su panel de control.</div>
           </div>
-
           <div class="faq-item bg-white rounded-xl border border-zinc-100 overflow-hidden">
             <button class="faq-question w-full text-left p-4 font-black text-zinc-800 flex items-center justify-between gap-2 hover:bg-zinc-50 transition" aria-expanded="false" aria-controls="faq-a7">
               <span class="text-sm md:text-base font-normal">¿Cobran algún porcentaje por las ventas que yo concrete?</span>
@@ -948,7 +756,7 @@
     </section>
 
     <!-- ═══════════════════════════════════════════════════════════ -->
-    <!-- SECCIÓN: CONTACTO DIRECTO                                   -->
+    <!-- CONTACTO DIRECTO                                            -->
     <!-- ═══════════════════════════════════════════════════════════ -->
     <section class="py-20 bg-brand-charcoal text-white px-4 md:px-8" aria-labelledby="contacto-title">
       <div class="max-w-4xl mx-auto text-center">
@@ -982,74 +790,79 @@
   </main>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- SECCIÓN: FOOTER                                             -->
+  <!-- FOOTER                                                      -->
   <!-- ═══════════════════════════════════════════════════════════ -->
-  <footer class="bg-brand-darkBg text-zinc-400 border-t border-zinc-800" role="contentinfo">
-    <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+<footer class="bg-brand-darkBg text-zinc-400 border-t border-zinc-800" role="contentinfo">
+  <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
 
-        <div>
-          <img src="/img/logo.png" alt="BuscaRepuestos.cl" class="h-8 md:h-10 w-auto object-contain mb-4" width="160" height="40" decoding="async">
-          <p class="text-xs text-zinc-500 leading-relaxed">Plataforma de intermediación que conecta compradores y distribuidores de repuestos automotrices en todo Chile.</p>
-          <p class="text-[11px] text-zinc-600 leading-relaxed mt-3">RENTAQ S.p.A. · RUT 76.894.402-4</p>
-          <div class="flex flex-wrap gap-2 mt-4">
-            <div class="bg-zinc-800/50 rounded-lg px-2.5 py-1.5 flex items-center gap-1.5 border border-zinc-700/30">
-              <span class="text-[10px] text-zinc-400 font-bold">Pago con</span>
-              <img src="/img/transbank.png" alt="Transbank" class="h-6 w-auto" width="70" height="24" decoding="async">
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="text-white text-sm font-bold mb-4">Navegación</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a href="https://www.buscarepuestos.cl" class="text-zinc-400 hover:text-brand-green transition">Inicio</a></li>
-            <li><a href="#como-funciona" class="text-zinc-400 hover:text-brand-green transition">Cómo funciona</a></li>
-            <li><a href="#planes" class="text-zinc-400 hover:text-brand-green transition">Planes</a></li>
-            <li><a href="#roi-calculator" class="text-zinc-400 hover:text-brand-green transition">Simulador ROI</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-white text-sm font-bold mb-4">Legal</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a href="/terminos-y-condiciones/" class="text-zinc-400 hover:text-brand-green transition">Términos y Condiciones</a></li>
-            <li><a href="/politica-de-privacidad/" class="text-zinc-400 hover:text-brand-green transition">Política de Privacidad</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 class="text-white text-sm font-bold mb-4">Contáctanos</h4>
-          <ul class="space-y-2 text-xs">
-            <li><a href="mailto:soporte@buscarepuestos.cl" class="text-zinc-400 hover:text-brand-green transition">soporte@buscarepuestos.cl</a></li>
-            <li><a href="https://wa.me/56949343971" target="_blank" rel="noopener" class="text-zinc-400 hover:text-brand-green transition">+56 9 4934 3971</a></li>
-          </ul>
-          <div class="flex gap-4 mt-6">
-            <a href="https://www.instagram.com/buscarepuestos.cl" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-zinc-400 hover:opacity-80 transition">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-            </a>
-            <a href="https://www.facebook.com/buscarepuestos.cl" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-zinc-400 hover:opacity-80 transition">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/company/buscarepuestos" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-zinc-400 hover:opacity-80 transition">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-            </a>
+      <!-- COLUMNA 1: Logo y descripción -->
+      <div>
+        <img src="/img/logo.png" alt="BuscaRepuestos.cl" class="h-8 md:h-10 w-auto object-contain mb-4" width="160" height="40" decoding="async">
+        <p class="text-xs text-zinc-500 leading-relaxed">Plataforma de intermediación que conecta compradores y distribuidores de repuestos automotrices en todo Chile.</p>
+        <p class="text-[11px] text-zinc-600 leading-relaxed mt-3">RENTAQ S.p.A. · RUT 76.894.402-4</p>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <div class="bg-zinc-800/50 rounded-lg px-2.5 py-1.5 flex items-center gap-1.5 border border-zinc-700/30">
+            <span class="text-[10px] text-zinc-400 font-bold">Pago con</span>
+            <img src="/img/transbank.png" alt="Transbank" class="h-6 w-auto" width="70" height="24" decoding="async">
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="border-t border-zinc-800/50 py-6">
-      <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-500">
-        <p>&copy; <span id="current-year">2026</span> BuscaRepuestos.cl. Todos los derechos reservados.</p>
-        <span>Plataforma Segura</span>
-        <div class="flex items-center gap-1.5">
-          <span>Hecho en Chile</span>
+      <!-- COLUMNA 2: Navegación -->
+      <div>
+        <h4 class="text-white text-sm font-bold mb-4">Navegación</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="https://www.buscarepuestos.cl" class="text-zinc-400 hover:text-brand-green transition">Inicio</a></li>
+          <li><a href="#como-funciona" class="text-zinc-400 hover:text-brand-green transition">Cómo funciona</a></li>
+          <li><a href="#planes" class="text-zinc-400 hover:text-brand-green transition">Planes</a></li>
+          <li><a href="#roi-calculator" class="text-zinc-400 hover:text-brand-green transition">Simulador ROI</a></li>
+        </ul>
+      </div>
+
+      <!-- COLUMNA 3: Legal -->
+      <div>
+        <h4 class="text-white text-sm font-bold mb-4">Legal</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="https://www.buscarepuestos.cl/terminos" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-brand-green transition">Términos y Condiciones</a></li>
+          <li><a href="https://www.buscarepuestos.cl/terminos" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-brand-green transition">Política de Privacidad</a></li>
+          <li><a href="/politica-de-cookies.html" class="text-zinc-400 hover:text-brand-green transition">Política de Cookies</a></li>
+          <li><button type="button" onclick="if(window.CookieConsent)window.CookieConsent.revoke()" class="text-zinc-400 hover:text-brand-green transition text-left">Configurar Cookies</button></li>
+        </ul>
+      </div>
+
+      <!-- COLUMNA 4: Contáctanos -->
+      <div>
+        <h4 class="text-white text-sm font-bold mb-4">Contáctanos</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="mailto:soporte@buscarepuestos.cl" class="text-zinc-400 hover:text-brand-green transition">soporte@buscarepuestos.cl</a></li>
+          <li><a href="https://wa.me/56949343971" target="_blank" rel="noopener" class="text-zinc-400 hover:text-brand-green transition">+56 9 4934 3971</a></li>
+        </ul>
+        <div class="flex gap-4 mt-6">
+          <a href="https://www.instagram.com/buscarepuestos.cl" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="text-zinc-400 hover:opacity-80 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/buscarepuestos.cl" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="text-zinc-400 hover:opacity-80 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/buscarepuestos" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-zinc-400 hover:opacity-80 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
         </div>
-        <a href="https://www.buscarepuestos.cl" class="hover:text-brand-green transition">www.buscarepuestos.cl</a>
       </div>
     </div>
-  </footer>
+  </div>
+
+  <!-- Barra inferior -->
+  <div class="border-t border-zinc-800/50 py-6">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-500">
+      <p>&copy; <span id="current-year">2026</span> BuscaRepuestos.cl. Todos los derechos reservados.</p>
+      <span>Plataforma Segura</span>
+      <div class="flex items-center gap-1.5"><span>Hecho en Chile</span></div>
+      <a href="https://www.buscarepuestos.cl" class="hover:text-brand-green transition">www.buscarepuestos.cl</a>
+    </div>
+  </div>
+</footer>
 
   <!-- WhatsApp flotante (elevado en móvil para no chocar con CTA) -->
   <a href="https://wa.me/56949343971?text=Hola%2C%20quiero%20ser%20distribuidor%20de%20BuscaRepuestos"
@@ -1067,9 +880,82 @@
       Regístrese como Distribuidor
     </a>
   </div>
-
+  <!-- Banner de cookies - Ley 21.719 -->
+  <div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-live="polite" aria-label="Aviso de cookies" aria-hidden="true">
+    <div class="cookie-banner__inner">
+      <div class="cookie-banner__text">
+        <p>
+          Usamos cookies para mejorar su experiencia. Puede aceptarlas todas, rechazarlas o configurarlas.
+          <a href="/politica-de-cookies.html">Política de Cookies</a>
+        </p>
+      </div>
+      <div class="cookie-banner__actions">
+        <button type="button" id="cookie-accept-all" class="cookie-banner__btn cookie-banner__btn--accept">Aceptar todas</button>
+        <button type="button" id="cookie-reject-all" class="cookie-banner__btn cookie-banner__btn--reject">Rechazar todas</button>
+        <button type="button" id="cookie-settings-toggle" class="cookie-banner__btn cookie-banner__btn--settings" aria-expanded="false" aria-controls="cookie-settings-panel">Configurar</button>
+      </div>
+    </div>
+    <div id="cookie-settings-panel" class="cookie-settings hidden">
+      <div class="cookie-banner__inner">
+        <div class="cookie-settings__option">
+          <input type="checkbox" id="cookie-analytics" checked>
+          <div class="cookie-settings__option-label">
+            <strong>Analíticas</strong>
+            <small>Permiten medir el tráfico y mejorar el sitio.</small>
+          </div>
+        </div>
+        <div class="cookie-settings__option">
+          <input type="checkbox" id="cookie-marketing" checked>
+          <div class="cookie-settings__option-label">
+            <strong>Marketing</strong>
+            <small>Permiten mostrar publicidad relevante.</small>
+          </div>
+        </div>
+        <button type="button" id="cookie-save-prefs" class="cookie-banner__btn cookie-banner__btn--accept cookie-settings__save">Guardar preferencias</button>
+      </div>
+    </div>
+  </div>
   <script src="/js/main.js" defer></script>
   <script src="/js/faq.js" defer></script>
   <script src="/js/roi-calculator.js" defer></script>
+  <!-- Banner de cookies - Ley 21.719 -->
+<div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-live="polite" aria-label="Aviso de cookies" aria-hidden="true">
+  <div class="cookie-banner__inner">
+    <div class="cookie-banner__text">
+      <p>
+        Usamos cookies para mejorar su experiencia. Puede aceptarlas todas, rechazarlas o configurarlas.
+        <a href="/politica-de-cookies.html">Política de Cookies</a>
+      </p>
+    </div>
+    <div class="cookie-banner__actions">
+      <button type="button" id="cookie-accept-all" class="cookie-banner__btn cookie-banner__btn--accept">Aceptar todas</button>
+      <button type="button" id="cookie-reject-all" class="cookie-banner__btn cookie-banner__btn--reject">Rechazar todas</button>
+      <button type="button" id="cookie-settings-toggle" class="cookie-banner__btn cookie-banner__btn--settings" aria-expanded="false" aria-controls="cookie-settings-panel">Configurar</button>
+    </div>
+  </div>
+  <div id="cookie-settings-panel" class="cookie-settings hidden">
+    <div class="cookie-banner__inner">
+      <div class="cookie-settings__option">
+        <input type="checkbox" id="cookie-analytics" checked>
+        <div class="cookie-settings__option-label">
+          <strong>Analíticas</strong>
+          <small>Permiten medir el tráfico y mejorar el sitio.</small>
+        </div>
+      </div>
+      <div class="cookie-settings__option">
+        <input type="checkbox" id="cookie-marketing" checked>
+        <div class="cookie-settings__option-label">
+          <strong>Marketing</strong>
+          <small>Permiten mostrar publicidad relevante.</small>
+        </div>
+      </div>
+      <button type="button" id="cookie-save-prefs" class="cookie-banner__btn cookie-banner__btn--accept cookie-settings__save">Guardar preferencias</button>
+    </div>
+  </div>
+</div>
+<script src="/js/main.js" defer></script>
+<script src="/js/faq.js" defer></script>
+<script src="/js/roi-calculator.js" defer></script>
+<script src="/js/cookie-consent.js" defer></script>
 </body>
 </html>

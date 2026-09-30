@@ -1,5 +1,6 @@
 /**
  * Simulador de ROI para distribuidores.
+ * Precios actualizados: $85.000 / $170.000 / $330.000
  */
 (function () {
   'use strict';

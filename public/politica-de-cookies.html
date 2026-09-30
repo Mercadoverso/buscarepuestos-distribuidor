@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es-CL" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Cookies | BuscaRepuestos.cl</title>
+  <meta name="description" content="Política de cookies de BuscaRepuestos.cl conforme a la Ley 21.719 de Protección de Datos Personales de Chile.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body class="bg-[#fafafa] text-zinc-800 font-sans antialiased">
+  <main class="max-w-3xl mx-auto px-4 py-16">
+    <a href="/" class="text-sm text-brand-green hover:underline mb-8 inline-block">&larr; Volver al inicio</a>
+    
+    <h1 class="text-3xl md:text-4xl font-black text-brand-charcoal mb-6">Política de Cookies</h1>
+    <p class="text-zinc-500 text-sm mb-8">Última actualización: Enero 2026</p>
+
+    <div class="prose prose-zinc max-w-none space-y-8 text-sm leading-relaxed">
+      <section>
+        <h2 class="text-xl font-bold text-brand-charcoal mb-3">1. ¿Qué son las cookies?</h2>
+        <p>Las cookies son pequeños archivos de texto que se almacenan en su navegador cuando visita un sitio web. Permiten que el sitio recuerde sus acciones y preferencias durante un período de tiempo.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-brand-charcoal mb-3">2. Cookies que utilizamos</h2>
+        <p class="mb-4">En BuscaRepuestos.cl utilizamos las siguientes categorías de cookies:</p>
+
+        <div class="bg-white rounded-xl border border-zinc-200 overflow-hidden">
+          <table class="w-full text-xs">
+            <thead class="bg-zinc-50">
+              <tr>
+                <th class="text-left p-3 font-bold">Categoría</th>
+                <th class="text-left p-3 font-bold">Finalidad</th>
+                <th class="text-left p-3 font-bold">Base legal</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-zinc-100">
+              <tr>
+                <td class="p-3 font-medium">Estrictamente necesarias</td>
+                <td class="p-3 text-zinc-600">Guardar su preferencia de consentimiento de cookies.</td>
+                <td class="p-3 text-zinc-600">Interés legítimo</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Analíticas</td>
+                <td class="p-3 text-zinc-600">Medir el tráfico y comportamiento de navegación de forma anónima.</td>
+                <td class="p-3 text-zinc-600">Consentimiento</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-medium">Marketing</td>
+                <td class="p-3 text-zinc-600">Mostrar publicidad relevante y medir campañas.</td>
+                <td class="p-3 text-zinc-600">Consentimiento</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-brand-charcoal mb-3">3. Consentimiento</h2>
+        <p>Al hacer clic en "Aceptar todas", usted consiente el uso de cookies analíticas y de marketing. Puede rechazarlas todas o configurarlas por categoría en cualquier momento.</p>
+        <p class="mt-3">Su consentimiento es libre, específico, informado e inequívoco, conforme al artículo 12 de la Ley 21.719.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-brand-charcoal mb-3">4. Revocación</h2>
+        <p>Puede revocar su consentimiento en cualquier momento haciendo clic en el enlace de configuración de cookies disponible en el pie de página del sitio, o eliminando las cookies desde la configuración de su navegador.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-bold text-brand-charcoal mb-3">5. Contacto</h2>
+        <p>Para consultas sobre esta política, contáctenos en <a href="mailto:soporte@buscarepuestos.cl" class="text-brand-green hover:underline">soporte@buscarepuestos.cl</a>.</p>
+      </section>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-zinc-200">
+      <button id="cookie-revoke-btn" class="text-sm text-brand-green hover:underline">
+        Revocar consentimiento de cookies
+      </button>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('cookie-revoke-btn').addEventListener('click', function() {
+      if (window.CookieConsent) {
+        window.CookieConsent.revoke();
+        alert('Consentimiento revocado. El banner de cookies se mostrará nuevamente.');
+      }
+    });
+  </script>
+  <script src="/js/cookie-consent.js" defer></script>
+</body>
+</html>
