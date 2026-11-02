@@ -1,6 +1,5 @@
 /**
  * Banner de consentimiento de cookies - Ley 21.719 Chile
- * Estándar minimalista para landing informativa.
  */
 (function () {
   'use strict';
@@ -45,12 +44,14 @@
     if (banner) {
       banner.classList.add('hidden');
       banner.setAttribute('aria-hidden', 'true');
+      // Ocultar el panel de configuración también al cerrar
+      document.getElementById('cookie-settings-panel').classList.add('hidden');
     }
   }
 
   function init() {
     var consent = getConsent();
-    if (consent) return;
+    if (consent) return; // Si ya aceptó, no mostramos nada
 
     showBanner();
 
@@ -62,6 +63,7 @@
     var settingsToggle = document.getElementById('cookie-settings-toggle');
     var settingsPanel = document.getElementById('cookie-settings-panel');
 
+    // Abrir/Cerrar panel de configuración
     if (settingsToggle && settingsPanel) {
       settingsToggle.addEventListener('click', function () {
         var isHidden = settingsPanel.classList.contains('hidden');
@@ -70,6 +72,7 @@
       });
     }
 
+    // Aceptar todas
     if (acceptAll) {
       acceptAll.addEventListener('click', function () {
         saveConsent(true, true);
@@ -77,6 +80,7 @@
       });
     }
 
+    // Rechazar todas
     if (rejectAll) {
       rejectAll.addEventListener('click', function () {
         saveConsent(false, false);
@@ -84,6 +88,7 @@
       });
     }
 
+    // Guardar preferencias del panel
     if (savePrefs) {
       savePrefs.addEventListener('click', function () {
         var analytics = analyticsToggle ? analyticsToggle.checked : false;
@@ -100,12 +105,16 @@
     init();
   }
 
-  // API pública para revocar consentimiento
+  // API pública para revocar consentimiento (útil para el botón "Configurar Cookies" del footer)
   window.CookieConsent = {
     revoke: function () {
       try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
       document.cookie = COOKIE_NAME + '=;path=/;max-age=0';
-      showBanner();
+      var banner = document.getElementById('cookie-banner');
+      if (banner) {
+        banner.classList.remove('hidden');
+        banner.setAttribute('aria-hidden', 'false');
+      }
     },
     getStatus: function () {
       return getConsent();

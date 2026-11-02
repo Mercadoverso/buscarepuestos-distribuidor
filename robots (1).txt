@@ -1,0 +1,6 @@
+# https://www.buscarepuestos.cl/robots.txt
+User-agent: *
+Allow: /
+# No bloquear /css/, /js/ ni /img/: Google necesita renderizar la página.
+
+Sitemap: https://www.buscarepuestos.cl/sitemap.xml
