@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="es-CL" dir="ltr">
+  <style>
+  /* Forzar que el acordeón se muestre al quitar la clase hidden */
+  .faq-answer:not(.hidden) {
+    display: block !important;
+  }
+</style>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -64,6 +70,7 @@
   <!-- CSS COMPILADO (sin CDN de Tailwind)                         -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="/css/cookie-consent.css">
 
   <!-- ═══════════════════════════════════════════════════════════ -->
@@ -306,7 +313,7 @@
               </div>
               <hr class="my-3.5 border-slate-100">
               <div class="flex gap-2">
-                <span class="flex-1 bg-brand-green text-white text-xs font-bold py-2.5 px-3 rounded-lg flex items-center justify-center gap-1.5 shadow-sm select-none" aria-hidden="true">Demostración</span>
+                <span class="flex-1 bg-brand-green text-white text-xs font-bold py-2.5 px-3 rounded-lg flex items-center justify-center gap-1.5 shadow-sm select-none" aria-hidden="true">ACEPTAR o Compartir</span>
               </div>
             </div>
           </div>
@@ -808,16 +815,18 @@
       button.addEventListener('click', () => {
         const isOpen = button.getAttribute('aria-expanded') === 'true';
 
-        // Opcional: Cerrar otros acordeones abiertos
+        // Cerrar los demás acordeones
         faqItems.forEach(otherItem => {
           if (otherItem !== item) {
             const otherButton = otherItem.querySelector('.faq-question');
             const otherAnswer = otherItem.querySelector('.faq-answer');
             const otherIcon = otherItem.querySelector('.faq-icon');
             
-            otherButton.setAttribute('aria-expanded', 'false');
-            otherAnswer.classList.add('hidden');
-            otherIcon.classList.remove('rotate-180');
+            if (otherButton && otherAnswer) {
+              otherButton.setAttribute('aria-expanded', 'false');
+              otherAnswer.classList.add('hidden');
+              if (otherIcon) otherIcon.classList.remove('rotate-180');
+            }
           }
         });
 
@@ -825,11 +834,11 @@
         if (isOpen) {
           button.setAttribute('aria-expanded', 'false');
           answer.classList.add('hidden');
-          icon.classList.remove('rotate-180');
+          if (icon) icon.classList.remove('rotate-180');
         } else {
           button.setAttribute('aria-expanded', 'true');
           answer.classList.remove('hidden');
-          icon.classList.add('rotate-180');
+          if (icon) icon.classList.add('rotate-180');
         }
       });
     });
@@ -915,11 +924,12 @@
       <div>
         <h4 class="text-white text-sm font-bold mb-4">Contáctanos</h4>
         <ul class="space-y-2 text-xs">
-          <li>
-  <a href="#" onclick="window.location.href='mailto:' + 'soporte' + '@' + 'buscarepuestos.cl'; return false;" class="text-zinc-400 hover:text-brand-green transition">
-    soporte@buscarepuestos.cl
-  </a>
-</li>
+          <li class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <a href="mailto:soporte@buscarepuestos.cl" class="text-zinc-400 hover:text-brand-green transition">
+              soporte@buscarepuestos.cl
+            </a>
+          </li>
           <li><a href="https://wa.me/56949343971" target="_blank" rel="noopener" class="text-zinc-400 hover:text-brand-green transition">+56 9 4934 3971</a></li>
         </ul>
         <div class="flex gap-4 mt-6">
@@ -934,8 +944,6 @@
           </a>
         </div>
       </div>
-    </div>
-  </div>
 
   <!-- Barra inferior -->
   <div class="border-t border-zinc-800/50 py-6">
@@ -958,15 +966,15 @@
     </svg>
   </a>
 
-  <!-- CTA fija móvil -->
+    <!-- CTA fija móvil -->
   <div class="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white border-t border-zinc-200 shadow-[0_-4px_12px_rgba(0,0,0,0.08)] px-4 py-3">
     <a href="https://www.buscarepuestos.cl/crear-cuenta-distribuidor" class="block w-full text-center bg-brand-green hover:bg-brand-greenDark text-white font-bold py-3 rounded-lg text-sm transition">
       Regístrese como Distribuidor
     </a>
   </div>
   
-    <!-- Banner de cookies - Ley 21.719 (Único y correcto) -->
-  <div id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-live="polite" aria-label="Aviso de cookies" aria-hidden="true">
+  <!-- ============ BANNER COOKIES (ÚNICO Y CORRECTO) ============ -->
+  <aside id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies" style="display: none;">
     <div class="cookie-banner__inner">
       <div class="cookie-banner__text">
         Usamos cookies para mejorar su experiencia. Puede aceptarlas todas, rechazarlas o configurarlas. 
@@ -1006,11 +1014,10 @@
         <button id="cookie-save-prefs" class="cookie-banner__btn cookie-banner__btn--accept cookie-settings__save">Guardar preferencias</button>
       </div>
     </div>
-  </div>
+  </aside>
   
   <!-- Scripts cargados una sola vez -->
   <script src="/js/main.js" defer></script>
-  <script src="/js/faq.js" defer></script>
   <script src="/js/roi-calculator.js" defer></script>
   <script src="/js/cookie-consent.js" defer></script>
 </body>

@@ -1,36 +1,39 @@
-/**
- * Acordeón accesible de Preguntas Frecuentes.
- */
-(function () {
-  'use strict';
+document.addEventListener('DOMContentLoaded', () => {
+  const faqItems = document.querySelectorAll('.faq-item');
 
-  document.addEventListener('DOMContentLoaded', function () {
-    var items = document.querySelectorAll('.faq-item');
-    if (!items.length) return;
+  faqItems.forEach(item => {
+    const button = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    const icon = item.querySelector('.faq-icon');
 
-    items.forEach(function (item) {
-      var btn = item.querySelector('.faq-question');
-      var answer = item.querySelector('.faq-answer');
-      var icon = btn ? btn.querySelector('svg') : null;
-      if (!btn || !answer) return;
+    button.addEventListener('click', () => {
+      const isOpen = button.getAttribute('aria-expanded') === 'true';
 
-      btn.addEventListener('click', function () {
-        var isOpen = !answer.classList.contains('hidden');
-
-        items.forEach(function (other) {
-          if (other === item) return;
-          var oa = other.querySelector('.faq-answer');
-          var ob = other.querySelector('.faq-question');
-          var oi = ob ? ob.querySelector('svg') : null;
-          if (oa) oa.classList.add('hidden');
-          if (ob) ob.setAttribute('aria-expanded', 'false');
-          if (oi) oi.style.transform = 'rotate(0deg)';
-        });
-
-        answer.classList.toggle('hidden');
-        btn.setAttribute('aria-expanded', String(!isOpen));
-        if (icon) icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+      // Cerrar los demás acordeones
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          const otherButton = otherItem.querySelector('.faq-question');
+          const otherAnswer = otherItem.querySelector('.faq-answer');
+          const otherIcon = otherItem.querySelector('.faq-icon');
+          
+          if (otherButton && otherAnswer) {
+            otherButton.setAttribute('aria-expanded', 'false');
+            otherAnswer.classList.add('hidden');
+            if (otherIcon) otherIcon.classList.remove('rotate-180');
+          }
+        }
       });
+
+      // Alternar el actual
+      if (isOpen) {
+        button.setAttribute('aria-expanded', 'false');
+        answer.classList.add('hidden');
+        if (icon) icon.classList.remove('rotate-180');
+      } else {
+        button.setAttribute('aria-expanded', 'true');
+        answer.classList.remove('hidden');
+        if (icon) icon.classList.add('rotate-180');
+      }
     });
   });
-})();
+});
