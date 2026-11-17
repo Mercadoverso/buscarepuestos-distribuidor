@@ -56,7 +56,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://wa.me">
-  <link rel="preload" as="image" href="/img/fondo.png" fetchpriority="high">
+  <link rel="preload" as="image" href="/img/fondo.WEBP" fetchpriority="high">
 
   <!-- ═══════════════════════════════════════════════════════════ -->
   <!-- FUENTES                                                     -->
@@ -185,37 +185,43 @@
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- HERO                                                        -->
 <!-- ═══════════════════════════════════════════════════════════ -->
-<section class="relative bg-cover bg-top text-white py-12 px-4 md:py-28 md:px-8 text-center overflow-hidden min-h-[400px] md:min-h-[500px] flex items-center" aria-label="Presentación">
+<section class="relative bg-cover bg-top text-white py-20 px-4 md:py-32 md:px-12 overflow-hidden min-h-[500px] md:min-h-[600px] flex items-center" aria-label="Presentación">
       
-      <!-- Aquí aplicamos la imagen de fondo -->
-      <div class="absolute inset-0 z-0 animate-kenburns" style="background-image: url('img/fondo.png'); background-size: cover; background-position: top center;" aria-hidden="true"></div>
+      <!-- Imagen de fondo (Mantiene tu imagen original) -->
+      <div class="absolute inset-0 z-0 animate-kenburns" style="background-image: url('img/fondo.WEBP'); background-size: cover; background-position: center right;" aria-hidden="true"></div>
       
-      <!-- Capa oscura para que el texto se lea bien -->
-      <div class="absolute inset-0 bg-black/70 z-10" aria-hidden="true"></div>
+      <!-- Capa oscura degradada (Más oscura a la izquierda para que el texto resalte, más clara a la derecha para ver el auto) -->
+      <div class="absolute inset-0 z-10" style="background: linear-gradient(to right, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.65) 45%, rgba(0,0,0,0.1) 100%);" aria-hidden="true"></div>
       
-      <div class="relative max-w-4xl mx-auto z-20">
-        <span class="bg-white/20 text-white border border-white/40 text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-4 inline-block animate-pulse-slow">Distribuidor</span>
-        
-        <h1 class="text-3xl md:text-5xl lg:text-6xl font-black mb-4 leading-tight tracking-tight">
-          Venda su Stock de Repuestos <br><span class="text-brand-green">Vía WhatsApp</span><br>
-          <span class="text-white">Sin Comisiones.</span>
-        </h1>
-        
-        <p class="text-base md:text-xl text-zinc-300 max-w-3xl mx-auto mb-3 font-medium">
-          Convierta su inventario en ventas efectivas hoy mismo.
-        </p>
-        
-        <p class="text-xs md:text-sm text-zinc-400 max-w-3xl mx-auto mb-6 font-semibold uppercase tracking-wide">
-         Desde $85.000/mes Plan · Sin contrato de permanencia
-        </p>
-        
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="https://www.buscarepuestos.cl/crear-cuenta-distribuidor" class="btn-primary">
-            Quiero Vender por WhatsApp
-          </a>
-          <a href="#como-funciona" class="btn-outline">
-            Ver Cómo Funciona
-          </a>
+      <!-- Contenedor alineado a la izquierda -->
+      <div class="relative max-w-6xl mx-auto z-20 w-full">
+        <div class="max-w-xl md:max-w-2xl text-left">
+          
+          <span class="bg-white/10 backdrop-blur-sm text-white border border-white/30 text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 inline-block animate-pulse-slow">Distribuidor</span>
+          
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-[1.1] tracking-tight">
+            Venda su Stock de Repuestos <br>
+            <span class="text-brand-green">Vía WhatsApp</span><br>
+            <span class="text-white">Sin Comisiones.</span>
+          </h1>
+          
+          <p class="text-base md:text-xl text-zinc-200 max-w-lg mb-4 font-medium leading-relaxed">
+            Convierta su inventario en ventas efectivas hoy mismo. Reciba pedidos calificados y gestione todo desde su celular.
+          </p>
+          
+          <p class="text-xs md:text-sm text-zinc-400 mb-8 font-semibold uppercase tracking-wide border-l-2 border-brand-green pl-3">
+            Desde $85.000/mes · Sin contrato de permanencia
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://www.buscarepuestos.cl/crear-cuenta-distribuidor" class="btn-primary shadow-lg shadow-brand-green/30">
+              Quiero Vender por WhatsApp
+            </a>
+            <a href="#como-funciona" class="btn-outline backdrop-blur-sm bg-white/5 border-white/30 hover:bg-white/10">
+              Ver Cómo Funciona
+            </a>
+          </div>
+          
         </div>
       </div>
     </section>
@@ -243,6 +249,92 @@
         </div>
       </div>
     </section>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+<!-- DATA BACKING: EL MERCADO YA DECIDIÓ                         -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="py-16 md:py-20 px-4 md:px-8 bg-white border-b border-zinc-100" aria-labelledby="data-title">
+  <div class="max-w-5xl mx-auto">
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <span class="bg-zinc-100 text-zinc-600 font-black text-xs uppercase tracking-widest px-4 py-2 rounded-full inline-block mb-4">
+        Evidencia del mercado chileno · 2026
+      </span>
+      <h2 id="data-title" class="text-3xl md:text-4xl font-black text-brand-charcoal tracking-tight leading-tight">
+        El mercado ya decidió.<br class="hidden sm:block">
+        <span class="text-brand-green">WhatsApp es el canal de ventas.</span>
+      </h2>
+      <p class="text-zinc-500 mt-4 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+        No es una proyección. Es lo que está pasando ahora en Chile. Tres fuentes independientes confirman la misma dirección.
+      </p>
+    </div>
+
+    <!-- Three data cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
+
+      <!-- Card 1: HubSpot 63% -->
+      <div class="bg-zinc-50 rounded-2xl p-6 md:p-7 border border-zinc-200 flex flex-col">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-3xl md:text-4xl font-black text-brand-green leading-none">63%</span>
+          <span class="text-[10px] font-bold text-zinc-400 uppercase tracking-wider leading-tight">de empresas<br>en Chile</span>
+        </div>
+        <p class="text-sm text-zinc-700 font-medium leading-relaxed flex-1">
+          Ya utiliza WhatsApp como canal comercial y de ventas, según el reporte de HubSpot sobre marketing y ventas 2026.
+        </p>
+        <p class="text-[10px] text-zinc-400 mt-4 font-medium">Fuente: HubSpot / Universidad de los Andes</p>
+      </div>
+
+      <!-- Card 2: Vambe 36% growth -->
+      <div class="bg-zinc-50 rounded-2xl p-6 md:p-7 border border-zinc-200 flex flex-col">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-3xl md:text-4xl font-black text-brand-green leading-none">+36%</span>
+          <span class="text-[10px] font-bold text-zinc-400 uppercase tracking-wider leading-tight">ventas cerradas<br>en el chat</span>
+        </div>
+        <p class="text-sm text-zinc-700 font-medium leading-relaxed flex-1">
+          Crecimiento en la proporción de ventas iniciadas en WhatsApp que se pagan sin salir de la conversación (2025 → 2026).
+        </p>
+        <p class="text-[10px] text-zinc-400 mt-4 font-medium">Fuente: Análisis Vambe, difundido por The Clinic</p>
+      </div>
+
+      <!-- Card 3: UACh human factor -->
+      <div class="bg-zinc-50 rounded-2xl p-6 md:p-7 border border-zinc-200 flex flex-col">
+        <div class="flex items-center gap-3 mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-brand-green shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+          <span class="text-xs font-black text-zinc-500 uppercase tracking-wider leading-tight">Lo que la<br>academia confirma</span>
+        </div>
+        <p class="text-sm text-zinc-700 font-medium leading-relaxed flex-1">
+          Los compradores valoran la rapidez del chat, pero <strong>penalizan que un bot no resuelva problemas complejos</strong>. La respuesta humana experta sigue siendo la que cierra la venta.
+        </p>
+        <p class="text-[10px] text-zinc-400 mt-4 font-medium">Fuente: Universidad Austral de Chile (UACh), 2025</p>
+      </div>
+
+    </div>
+
+    <!-- Bridge: por qué esto importa para ti -->
+    <div class="bg-brand-charcoal rounded-2xl p-6 md:p-8 text-white">
+      <div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
+        <div class="flex-1">
+          <p class="text-brand-green text-xs font-bold uppercase tracking-widest mb-2">Lo que esto significa para su negocio</p>
+          <p class="text-base md:text-lg leading-relaxed text-zinc-200">
+            El 63% de sus competidores ya está en WhatsApp. El 36% de crecimiento muestra que los compradores <strong>prefieren cerrar dentro del chat</strong>. Y la academia confirma que <strong>la venta la cierra una persona que sabe</strong>, no un bot.
+          </p>
+        </div>
+        <div class="md:w-56 shrink-0">
+          <a href="#planes" class="inline-block w-full text-center bg-brand-green hover:bg-brand-greenDark text-white font-bold text-sm px-6 py-3.5 rounded-xl transition shadow-lg">
+            Ver planes desde $85.000
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Risk reversal micro-copy -->
+    <p class="text-center text-xs text-zinc-400 mt-6 font-medium">
+      Sin contrato de permanencia · Pause o cancele cuando quiera · 0% comisión por venta
+    </p>
+
+  </div>
+</section>
 
     <!-- ═══════════════════════════════════════════════════════════ -->
     <!-- CÓMO FUNCIONA                                               -->
