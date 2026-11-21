@@ -175,9 +175,9 @@
       <a href="#planes" class="hover:text-brand-green transition">Planes</a>
       <a href="#faq-container" class="hover:text-brand-green transition">Preguntas frecuentes</a>
     </nav>
-    <a href="https://www.buscarepuestos.cl/crear-cuenta-distribuidor" class="bg-brand-green hover:bg-brand-greenDark text-white font-bold py-2.5 px-5 rounded-lg text-sm md:text-base transition duration-300 transform hover:scale-105 shadow-md">
+   <!-- <a href="https://www.buscarepuestos.cl/crear-cuenta-distribuidor" class="bg-brand-green hover:bg-brand-greenDark text-white font-bold py-2.5 px-5 rounded-lg text-sm md:text-base transition duration-300 transform hover:scale-105 shadow-md">
       Regístrese Aquí
-    </a>
+    </a> -->
   </header>
 
   <main id="main">
@@ -348,8 +348,8 @@
           <div class="flex gap-4 items-start p-5 bg-white rounded-2xl shadow-sm border border-zinc-100">
             <div class="bg-green-50 text-brand-green p-3.5 rounded-xl font-bold text-xl" aria-hidden="true">1</div>
             <div>
-              <h3 class="text-lg font-black text-brand-charcoal">El cliente pide el repuesto</h3>
-              <p class="text-zinc-600 text-sm mt-1">Talleres y particulares indican el tipo de repuesto, marca, modelo, año, patente y VIN, además de sus datos de contacto. Usted recibe la información completa lista para cotizar y responder.</p>
+              <h3 class="text-lg font-black text-brand-charcoal">El cliente solicita el repuesto</h3>
+              <p class="text-zinc-600 text-sm mt-1">Talleres y particulares indican el tipo de repuesto, marca, modelo, año, patente y VIN, además de sus datos de contacto. Usted recibe la información completa lista para cotizar y responder. Ver solicitud.</p>
             </div>
           </div>
           <div class="flex gap-4 items-start p-5 bg-white rounded-2xl shadow-sm border border-zinc-100">
@@ -369,56 +369,61 @@
         </div>
 
         <!-- Tarjeta estilo Mesón Digital -->
-        <div class="lg:col-span-5">
-          <article class="bg-white rounded-2xl shadow-xl border border-zinc-200 overflow-hidden flex flex-col justify-between max-w-[380px] mx-auto">
-            <!-- Imagen / Logo -->
-            <div class="relative bg-zinc-200 h-48 overflow-hidden flex items-center justify-center p-6">
-               <!-- Reemplaza esta imagen por el logo BR o una foto de repuesto -->
-               <img src="/img/logob.png" alt="BuscaRepuestos.cl" class="w-32 h-auto object-contain opacity-90 drop-shadow-md">
-            </div>
-            
-            <!-- Contenido -->
-            <div class="p-5 flex-1 flex flex-col justify-between">
-              <div>
-                <h4 class="font-black text-zinc-900 text-lg leading-tight mb-1">Cremallera De Dirección</h4>
-                <p class="text-xs text-zinc-500 font-medium mb-4">Ford Explorer • 2024</p>
-                
-                <div class="space-y-2.5 text-sm border-t border-zinc-100 pt-4">
-                  <div class="flex justify-between items-center">
-                    <span class="text-zinc-500 font-medium">Calidad</span>
-                    <span class="text-zinc-900 font-bold">Original</span>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <span class="text-zinc-500 font-medium">Chasis (VIN)</span>
-                    <span class="text-zinc-900 font-bold">N/A</span>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <span class="text-zinc-500 font-medium">Patente</span>
-                    <span class="text-zinc-900 font-bold font-mono">TDRT67</span>
-                  </div>
-                  <div class="flex justify-between items-center">
-                    <span class="text-zinc-500 font-medium">Publicado</span>
-                    <div class="text-right">
-                      <span class="text-zinc-900 font-bold block">Magallanes</span>
-                      <span class="text-[10px] text-zinc-400">04-10-2026</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Botones -->
-              <div class="mt-6 flex gap-3">
-                <button type="button" class="flex-1 bg-white border-2 border-zinc-200 text-zinc-700 font-bold py-2.5 px-4 rounded-xl hover:bg-zinc-50 transition text-sm">
-                  Compartir
-                </button>
-                <button type="button" class="flex-1 bg-brand-green text-white font-bold py-2.5 px-4 rounded-xl hover:bg-brand-greenDark transition shadow-md text-sm">
-                  Aceptar
-                </button>
-              </div>
-            </div>
-          </article>
+<div class="lg:col-span-5">
+  <article class="bg-white rounded-2xl shadow-xl border border-zinc-200 overflow-hidden flex flex-col max-w-[380px] mx-auto">
+
+    <!-- Sección gris -->
+    <div class="bg-zinc-100 w-full overflow-hidden" style="height:192px; background-color:#f4f4f5;">
+      <img
+        src="/img/cremallera.png"
+        alt="Cremallera de dirección"
+        style="width:100%; height:100%; object-fit:contain; mix-blend-mode:multiply; transform:scale(1.7);"
+      >
+    </div>
+
+    <!-- Contenido -->
+    <div class="p-5 flex flex-col gap-4">
+      <div>
+        <h4 class="font-black text-zinc-900 text-lg leading-tight mb-1">Cremallera De Dirección (Solicitud)</h4>
+        <p class="text-xs text-zinc-400 font-medium">Ford Explorer • 2024</p>
+      </div>
+
+      <div class="space-y-2.5 text-sm border-t border-zinc-100 pt-4">
+        <div class="flex justify-between items-center">
+          <span class="text-zinc-500 font-medium">Calidad:</span>
+          <span class="text-zinc-900 font-bold">Original</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-zinc-500 font-medium">Chasis (VIN):</span>
+          <span class="text-zinc-400">1FMSK8DH4RGA01766</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-zinc-500 font-medium">Patente:</span>
+          <span class="text-zinc-900 font-bold font-mono">TDRT67</span>
         </div>
       </div>
+
+      <div class="text-right">
+        <div class="text-[11px] font-bold text-zinc-400">Magallanes</div>
+        <div class="text-[10px] text-zinc-400">04-10-2026</div>
+      </div>
+
+      <!-- Botones dentro de la tarjeta -->
+      <div class="flex gap-3 pt-1">
+        <button type="button" class="flex-1 bg-white border-2 border-zinc-200 text-zinc-700 font-bold py-2.5 px-4 rounded-xl hover:bg-zinc-50 transition text-sm">
+          Compartir
+        </button>
+        <button type="button" class="flex-1 text-white font-bold py-2.5 px-4 rounded-xl shadow-md hover:opacity-90 transition text-sm" style="background-color:#73b87b;">
+          Aceptar
+        </button>
+      </div>
+    </div>
+  </article>
+</div>
+            
+
+              
+              
     </section>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
@@ -573,7 +578,6 @@
           </ol>
         </div>
       </div>
-
       <!-- NOTA ACLARATORIA -->
       <div class="mt-8 bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm max-w-4xl mx-auto text-center">
         <p class="text-sm text-zinc-600">
@@ -734,7 +738,7 @@
             <div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-2" aria-hidden="true">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-brand-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
-            <p class="text-xs font-bold text-zinc-600">Soporte 24/7</p>
+            <p class="text-xs font-bold text-zinc-600">Soporte</p>
             <p class="text-[10px] text-zinc-400">Asistencia continua</p>
           </div>
           <div class="text-center">
@@ -794,19 +798,19 @@
         <!-- Flujo en 3 pasos (columnas iguales, simetría horizontal) -->
         <ol class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 items-stretch" aria-label="Cómo se combinan tecnología y personas">
           <li class="bg-zinc-50 p-8 md:p-10 rounded-2xl border border-zinc-200 shadow-sm flex flex-col">
-            <span class="inline-block bg-brand-charcoal text-white text-[11px] font-black px-3 py-1.5 rounded-md tracking-wider self-start">01 · LA IA ASISTE AL CLIENTE</span>
+            <span class="inline-block bg-brand-charcoal text-white text-[11px] font-black px-3 py-1.5 rounded-md tracking-wider self-start">01</span>
             <h3 class="text-xl font-black text-brand-charcoal mt-6 mb-3">Solicitudes claras desde el origen</h3>
             <p class="text-zinc-600 text-sm leading-relaxed">El cliente fotografía la pieza, la IA completa nombre y descripción en el formulario. El resultado: pedidos más precisos para usted.</p>
           </li>
 
           <li class="bg-zinc-50 p-8 md:p-10 rounded-2xl border border-zinc-200 shadow-sm flex flex-col">
-            <span class="inline-block bg-brand-green text-white text-[11px] font-black px-3 py-1.5 rounded-md tracking-wider self-start">02 · LLEGA A SU WHATSAPP</span>
+            <span class="inline-block bg-brand-green text-white text-[11px] font-black px-3 py-1.5 rounded-md tracking-wider self-start">02</span>
             <h3 class="text-xl font-black text-brand-charcoal mt-6 mb-3">Solo WhatsApp</h3>
             <p class="text-zinc-600 text-sm leading-relaxed">Las solicitudes se envían automáticamente a su WhatsApp <strong>según las marcas de su registro</strong>. Usted solo lee y responde.</p>
           </li>
 
           <li class="bg-zinc-50 p-8 md:p-10 rounded-2xl border border-zinc-200 shadow-sm flex flex-col">
-            <span class="inline-block bg-brand-charcoal text-white text-[11px] font-black px-3 py-1.5 rounded-md tracking-wider self-start">03 · LAS PERSONAS RESUELVEN</span>
+            <span class="inline-block bg-brand-charcoal text-white text-[11px] font-black px-3 py-1.5 rounded-md tracking-wider self-start">03</span>
             <h3 class="text-xl font-black text-brand-charcoal mt-6 mb-3">Cotiza, asesora y cierra usted</h3>
             <p class="text-zinc-600 text-sm leading-relaxed">Compatibilidades, alternativas, precio y disponibilidad los define el distribuidor y los conversa directo con el cliente por WhatsApp.</p>
           </li>
@@ -1226,7 +1230,7 @@
       <p>&copy; <span id="current-year">2026</span> BuscaRepuestos.cl. Todos los derechos reservados.</p>
       <span>Plataforma Segura</span>
       <div class="flex items-center gap-1.5"><span>Hecho en Chile</span></div>
-      <a href="https://www.buscarepuestos.cl" class="hover:text-brand-green transition">www.buscarepuestos.cl</a>
+      
     </div>
   </div>
 </footer>
